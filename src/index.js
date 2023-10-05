@@ -49,11 +49,19 @@ const pizzaData = [
 function App() {
   return (
     <div>
-      <h1>Hello! I am a potato.</h1>
+      <Header />
       <Pizza />
     </div>
   );
 }
+
+function Header() {
+  return <h1>Pizza Place 19</h1>;
+}
+
+function Menu() {}
+
+function Footer() {}
 
 function Pizza() {
   return (
