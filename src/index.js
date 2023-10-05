@@ -58,12 +58,16 @@ function App() {
 }
 
 function Header() {
-  return <h1 style={{ color: "salmon", fontSize: "50px" }}>Pizza Place 19</h1>;
+  return (
+    <header className="header">
+      <h1>Pizza Place 19</h1>
+    </header>
+  );
 }
 
 function Menu() {
   return (
-    <div>
+    <div className="menu">
       <h2>Our Pizzas</h2>
       <Pizza />
     </div>
@@ -77,7 +81,9 @@ function Footer() {
   const ifOpen = hour >= openHour && hour <= closeHour;
 
   return (
-    <footer>{new Date().toLocaleTimeString()} - We are currently open!</footer>
+    <footer className="footer">
+      {new Date().toLocaleTimeString()} - We are currently open!
+    </footer>
   );
 }
 
@@ -85,7 +91,7 @@ function Pizza() {
   return (
     <div>
       <img src="pizzas/spinaci.jpg" alt="Pizza Spinaci" />
-      <h2>Pizza Spinaci</h2>
+      <h3>Pizza Spinaci</h3>
       <p>Tomato, mozarella, spinach, and ricotta cheese</p>
     </div>
   );
