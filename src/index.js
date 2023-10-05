@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./index.css";
 
 const pizzaData = [
   {
@@ -57,7 +58,7 @@ function App() {
 }
 
 function Header() {
-  return <h1>Pizza Place 19</h1>;
+  return <h1 style={{ color: "salmon", fontSize: "50px" }}>Pizza Place 19</h1>;
 }
 
 function Menu() {
@@ -73,9 +74,7 @@ function Footer() {
   const hour = new Date().getHours();
   const openHour = 12;
   const closeHour = 22;
-
-  if (hour >= openHour && hour <= closeHour) alert("We're currently open!");
-  else alert("Sorry, we're closed.");
+  const ifOpen = hour >= openHour && hour <= closeHour;
 
   return (
     <footer>{new Date().toLocaleTimeString()} - We are currently open!</footer>
