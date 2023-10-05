@@ -50,7 +50,7 @@ function App() {
   return (
     <div>
       <Header />
-      <Pizza />
+      <Menu />
       <Footer />
     </div>
   );
@@ -60,7 +60,14 @@ function Header() {
   return <h1>Pizza Place 19</h1>;
 }
 
-function Menu() {}
+function Menu() {
+  return (
+    <div>
+      <h2>Our Pizzas</h2>
+      <Pizza />
+    </div>
+  );
+}
 
 function Footer() {
   return (
