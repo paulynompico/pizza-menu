@@ -51,6 +51,7 @@ function App() {
     <div>
       <Header />
       <Pizza />
+      <Footer />
     </div>
   );
 }
@@ -61,7 +62,11 @@ function Header() {
 
 function Menu() {}
 
-function Footer() {}
+function Footer() {
+  return (
+    <footer>{new Date().toLocaleTimeString()} - We are currently open!</footer>
+  );
+}
 
 function Pizza() {
   return (
