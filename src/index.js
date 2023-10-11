@@ -75,13 +75,7 @@ function Menu() {
       {numPizzas > 0 ? (
         <div className="pizzas">
           {pizzaData.map((pizza) => (
-            <Pizza
-              name={pizza.name}
-              ingredients={pizza.ingredients}
-              photoName={pizza.photoName}
-              price={pizza.price}
-              soldOut={pizza.soldOut}
-            />
+            <Pizza pizzaObj={pizza} key={pizza.name} />
           ))}
         </div>
       ) : (
@@ -111,26 +105,25 @@ function Footer() {
   );
 }
 
-function Pizza(props) {
-  console.log(props);
-  if (props.soldOut)
+function Pizza({ pizzaObj }) {
+  if (pizzaObj.soldOut)
     return (
       <div className="pizza">
-        <img src={props.photoName} alt={props.name} />
+        <img src={pizzaObj.photoName} alt={pizzaObj.name} />
         <div>
-          <h3>{props.name}</h3>
-          <p>{props.ingredients}</p>
+          <h3>{pizzaObj.name}</h3>
+          <p>{pizzaObj.ingredients}</p>
           <span>SOLD OUT</span>
         </div>
       </div>
     );
   return (
     <div className="pizza">
-      <img src={props.photoName} alt={props.name} />
+      <img src={pizzaObj.photoName} alt={pizzaObj.name} />
       <div>
-        <h3>{props.name}</h3>
-        <p>{props.ingredients}</p>
-        <span>{props.price}</span>
+        <h3>{pizzaObj.name}</h3>
+        <p>{pizzaObj.ingredients}</p>
+        <span>{pizzaObj.price}</span>
       </div>
     </div>
   );
