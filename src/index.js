@@ -80,6 +80,7 @@ function Menu() {
               ingredients={pizza.ingredients}
               photoName={pizza.photoName}
               price={pizza.price}
+              soldOut={pizza.soldOut}
             />
           ))}
         </div>
@@ -111,6 +112,18 @@ function Footer() {
 }
 
 function Pizza(props) {
+  console.log(props);
+  if (props.soldOut)
+    return (
+      <div className="pizza">
+        <img src={props.photoName} alt={props.name} />
+        <div>
+          <h3>{props.name}</h3>
+          <p>{props.ingredients}</p>
+          <span>SOLD OUT</span>
+        </div>
+      </div>
+    );
   return (
     <div className="pizza">
       <img src={props.photoName} alt={props.name} />
