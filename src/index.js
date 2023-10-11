@@ -72,7 +72,7 @@ function Menu() {
   return (
     <div className="menu">
       <h2>Our Pizzas</h2>
-      {numPizzas > 0 && (
+      {numPizzas > 0 ? (
         <div className="pizzas">
           {pizzaData.map((pizza) => (
             <Pizza
@@ -83,6 +83,8 @@ function Menu() {
             />
           ))}
         </div>
+      ) : (
+        <p>no pizzas available</p>
       )}
     </div>
   );
