@@ -91,9 +91,12 @@ function Footer() {
 
   return (
     <footer className="footer">
-      <p>
-        We're happy to welcome you between {openHour}:00 and {closeHour}:00.
-      </p>
+      {isOpen && (
+        <div className="order">
+          <p>Open</p>
+          <button className="btn">Order</button>
+        </div>
+      )}
     </footer>
   );
 }
