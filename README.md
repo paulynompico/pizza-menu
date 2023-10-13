@@ -1,5 +1,5 @@
 # Pizza Place 19
 
-Fast React pizza menu app
+Quick and simple pizza menu app using React
 
 ![Screenshot](pizzaplace19.jpg)
